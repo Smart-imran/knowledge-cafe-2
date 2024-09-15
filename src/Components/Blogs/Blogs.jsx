@@ -3,7 +3,7 @@ import { useState } from "react";
 import Blog from "../Blog/Blog";
 
 
-const Blogs = () => {
+const Blogs = ({addToBookmark}) => {
 
     const [blogs, setBolgs] = useState([]);
 
@@ -24,6 +24,7 @@ const Blogs = () => {
                 
                 key = {blog.id}
                 blog={blog}
+                addToBookmark = {addToBookmark}
                 ></Blog>)
             }
         </div>

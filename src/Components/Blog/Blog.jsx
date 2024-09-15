@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { FaAppleWhole } from "react-icons/fa6";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog,addToBookmark }) => {
 
     const { title, cover, reading_time, author, author_img ,posted_date ,hashtags } = blog;
 
@@ -23,7 +23,10 @@ const Blog = ({ blog }) => {
 
                 <div>
                         <span>{reading_time} min read</span>
-                        <button className='ml-2 text-xl text-red-500'><FaAppleWhole /></button>
+                        <button 
+                        onClick={addToBookmark} className='ml-2 text-xl text-red-500'>
+                        <FaAppleWhole/>
+                        </button>
                 </div>
 
             </div>
